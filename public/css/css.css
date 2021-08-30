@@ -1,0 +1,212 @@
+
+body {
+    background-color: rgba(41, 71, 122, 0.6);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0px 0px;
+}
+
+#fake-body{
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+}
+
+nav {
+    text-align: center;
+    border-bottom: 1px solid rgb(99, 99, 163);
+    width: 100%;
+    height: 80px;
+    padding-top: 40px;
+    position: fixed;
+    margin-top: -200px;
+    background-color: rgb(41, 72, 124);
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+}
+
+
+article{
+    width: 100%;
+    background-color: #fefefe;
+    border-radius: 30px;
+    padding: 30px 30px;
+    margin-bottom: 20px;
+    transition-duration: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+article:hover{
+    scale:1.1;
+}
+
+.commentaire{
+    width: 100%;
+    
+    
+    
+}
+
+.sub-commentaire{
+    display: flex;
+    flex-direction: column;
+    background-color: #fefefe;
+    border-radius: 30px;
+    padding: 30px 30px;
+    margin-bottom: 20px;
+    transition-duration: 0.3s;
+}
+
+.sub-commentaire:hover{
+    scale: 1.1;
+}
+
+
+article .btn-pack-class{
+    align-self:flex-end;
+}
+
+.sub-commentaire .btn-pack-class{
+    align-self: flex-end;
+}
+
+/* CSS sur les boutons */
+
+#btn-add{
+    margin-bottom: 30px;
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    border: 2px solid #b8aaaa; /* Blue */
+    border-radius: 20px;
+    padding: 10px 24px;
+}
+
+#btn-add:hover {
+  background-color: #b8aaaa; /* Blue */
+  color: white;
+}
+
+#btn-read{
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    border: 2px solid #b8aaaa; /* Green */
+    border-radius: 20px;
+    padding: 10px 24px;
+}
+
+#btn-read:hover {
+  background-color: #b8aaaa; /* Green */
+  color: white;
+}
+
+#btn-update{
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    border: 2px solid #b8aaaa; /* Orange */
+    border-radius: 20px;
+    padding: 10px 24px;
+}
+
+#btn-update:hover {
+  background-color: #b8aaaa; /* Orange */
+  color: white;
+}
+
+#btn-delete{
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    border: 2px solid #b8aaaa; /* Red */
+    border-radius: 20px;
+    padding: 10px 24px;
+}
+
+#btn-delete:hover {
+  background-color: #b8aaaa; /* Red */
+  color: white;
+}
+
+#btn-back{
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    border: 2px solid #b8aaaa; /* Grey */
+    border-radius: 20px;
+    padding: 10px 24px;
+}
+
+#btn-back:hover {
+  background-color: #b8aaaa; /* Grey */
+  color: white;
+}
+
+#btn-send{
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    border: 2px solid #67d15e; /* Green */
+    border-radius: 20px;
+    padding: 10px 24px;
+    width: 100%;
+}
+
+
+
+#btn-send:hover {
+  background-color: #67d15e; /* Green */
+  color: white;
+}
+
+#btn-send-commentaire{
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    border: 2px solid #b8aaaa; /* Green */
+    border-radius: 20px;
+    padding: 10px 24px;
+    width: 15%;
+}
+
+#btn-send-commentaire:hover {
+    background-color: #b8aaaa; /* Grey */
+    color: white;
+  }
+/* CSS sur les form */
+
+form{
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    border: 2px solid rgb(4, 0, 255);
+    border-radius: 4px;
+}
+
+input:focus {
+    background-color: rgba(194, 227, 238, 0.5);
+  }
+
+textarea{
+    width: 100%;
+    border: 2px solid rgb(4, 0, 255);
+    border-radius: 4px;
+}
+
+textarea:focus {
+    background-color: rgba(194, 227, 238, 0.5);
+  }
+
+#form-commentaire{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
