@@ -11,6 +11,6 @@ include 'header.php';
 <div><span>Genre : </span><span><?= $user->getGenre() ?? 'N/A'; ?></span></div>
 <div><span>Groupe : </span><span><?= $user->getGroup() ?? 'N/A'; ?></span></div>
 
-<a href="edit_user_controller.php?id=<?= $user->getId_user() ?>">Modifier le profil</a>
+<a href="update">Modifier le profil</a>
 
 <?php include 'footer.php'; ?>

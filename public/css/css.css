@@ -210,3 +210,12 @@ textarea:focus {
     flex-direction: row;
     margin-bottom: 20px;
 }
+
+table{
+    table-layout: auto;
+    border:1px solid black;
+}
+
+tr, td {
+    border: 1px black solid;
+  }

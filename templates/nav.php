@@ -5,6 +5,6 @@
 <?php else : ?>
 <a href="article/new"><button id="btn-add">Ajouter un article</button></a>
 <a href="<?=HTTP?>userlist"><button id="btn-add">Liste des utilisateurs</button></a>
-<a href="show_one_user_controller.php?id=<?= unserialize($_SESSION["user"])->getId_user(); ?>"><button id="btn-add">Afficher mon profil</button></a>
+<a href="<?=HTTP?>user<?= DIRECTORY_SEPARATOR . unserialize($_SESSION["user"])->getId_user() . DIRECTORY_SEPARATOR ?>show"><button id="btn-add">Afficher mon profil</button></a>
 <a href="<?=HTTP?>signout"><button id="btn-add">Se déconnecter</button></a>
 <?php endif; ?>

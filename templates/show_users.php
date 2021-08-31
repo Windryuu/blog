@@ -47,9 +47,9 @@ else :
                     <td><?= $user->getGenre() ?></td>
                     <td><?= $user->getGroup() ?></td>
                     <td>
-                        <a href="<?= sprintf("show_one_user_controller.php?id=%d", $user->getId_user()) ?>"><button id="btn-add">Afficher</button></a>
-                        <a href="<?= sprintf("edit_user_controller.php?id=%d", $user->getId_user()) ?>"><button id="btn-add">Modifier</button></a>
-                        <a href="<?= sprintf("delete_user_controller.php?id=%d", $user->getId_user()) ?>"><button id="btn-add">Supprimer</button></a>
+                        <a href="user<?=DIRECTORY_SEPARATOR . $user->getId_user() . DIRECTORY_SEPARATOR ?>show"><button id="btn-add">Afficher</button></a>
+                        <a href="user<?=DIRECTORY_SEPARATOR . $user->getId_user() . DIRECTORY_SEPARATOR ?>update"><button id="btn-add">Modifier</button></a>
+                        
                     </td>
                 </tr>
             <?php

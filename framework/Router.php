@@ -120,6 +120,29 @@ class Router {
             ) {
                 (new UserController($request,$router,$session))->userList();
             },
+            1 === preg_match("#^/user/([0-9]+)/show$#",$uri,$this->matches) => function (
+                Request $request,
+                Router $router,
+                Session $session,
+                array $matches
+            ) {
+                //dump($_POST);
+                //dump($matches);
+                (new UserController($request,$router,$session))->userShowOne($matches[1]);
+            },
+            1 === preg_match("#^/user/([0-9]+)/update$#",$uri,$this->matches) => function (
+                Request $request,
+                Router $router,
+                Session $session,
+                array $matches
+            ) {
+                //dump($_POST);
+                //dump($matches);
+                (new UserController($request,$router,$session))->userUpdate($matches[1]);
+            },
+
+
+            
 
 
             default => function () {
