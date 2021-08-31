@@ -6,8 +6,8 @@ include 'header.php';
     <h1><?= trim(filter_var($article->getTitle(), FILTER_SANITIZE_FULL_SPECIAL_CHARS)) ?></h1>
     <p><?= nl2br(trim(filter_var($article->getDescription(), FILTER_SANITIZE_FULL_SPECIAL_CHARS))) ?></p>
     <div class="btn-pack-class">
-        <a href="edit_article_controller.php?id=<?= $article->getId_article() ?>"><button id="btn-add">Editer l'article</button></a>
-        <a href="delete_article_controller.php?id=<?= $article->getId_article() ?>"><button id="btn-add">Supprimer l'article</button></a>
+        <a href="edit"><button id="btn-add">Editer l'article</button></a>
+        <a href="delete"><button id="btn-add">Supprimer l'article</button></a>
         <a href="comment"><button id="btn-add">Ajouter un commentaire</button></a>
     </div>
     

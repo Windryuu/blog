@@ -98,7 +98,20 @@ class CommentaireController{
         }
 
             if (!isset($commentaire_post["contenu"]) || !empty($error_messages)) {
-            include TEMPLATES . DIRECTORY_SEPARATOR . "edit_commentaire.php";
+                try {
+                    $commentaire = (new CommentaireRepository())
+                    ->getCommentaireById($id_commentaire);
+                    
+                    
+                    if(!is_null($commentaire)){
+                        include TEMPLATES . DIRECTORY_SEPARATOR . "edit_commentaire.php";
+                    } else {
+                        $this->router->redirectToRoute();
+                        exit;
+                    }
+                } catch (PDOException $f) {
+                    echo $f->getMessage();
+                }
             } else {
             //$commentaire=(new Commentaire())->setContenu($commentaire_post["contenu"]);
             $commentaire->setContenu($commentaire_post["contenu"]);

@@ -18,7 +18,7 @@ class UserController{
     {
         
     }
-
+    
     public function userSignup(){
         if (isset($_SESSION["user"])) {
             header("Location:../../../../article");

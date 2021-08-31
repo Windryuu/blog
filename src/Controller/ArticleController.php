@@ -135,7 +135,20 @@ class ArticleController{
         }
 
         if (!(isset($article_post["title"]) && isset($article_post["description"])) || !empty($error_messages)) {
-            require TEMPLATES . DIRECTORY_SEPARATOR . "edit_article.php";
+            
+            try {
+                $article = (new ArticleRepository())->getArticleById($id);
+                if (!is_null($article)) {
+                    require TEMPLATES . DIRECTORY_SEPARATOR . "edit_article.php";
+                } else {
+                    $this->router->redirectToRoute();
+                    exit;
+                }
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+            }
+            
+            
         } else {
             $article = (new Article())
                 ->setId_article($id)
