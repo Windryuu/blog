@@ -5,6 +5,7 @@ namespace framework;
 use Closure;
 use controller\ArticleController;
 use controller\CommentaireController;
+use controller\UserController;
 
 class Router {
 
@@ -90,6 +91,34 @@ class Router {
                 //dump($_POST);
                 //dump($matches);
                 (new CommentaireController($request,$router,$session))->editCommentaire($matches[2]);
+            },
+            1 === preg_match("#^/signup$#",$uri) => function (
+                Request $request,
+                Router $router,
+                Session $session
+            ) {
+                (new UserController($request,$router,$session))->userSignup();
+            },
+            1 === preg_match("#^/signin$#",$uri) => function (
+                Request $request,
+                Router $router,
+                Session $session
+            ) {
+                (new UserController($request,$router,$session))->userSignin();
+            },
+            1 === preg_match("#^/signout$#",$uri) => function (
+                Request $request,
+                Router $router,
+                Session $session
+            ) {
+                (new UserController($request,$router,$session))->userSignout();
+            },
+            1 === preg_match("#^/userlist$#",$uri) => function (
+                Request $request,
+                Router $router,
+                Session $session
+            ) {
+                (new UserController($request,$router,$session))->userList();
             },
 
 
