@@ -41,7 +41,7 @@ class Router {
                 Session $session,
                 array $matches
             ) {
-                //dump($matches);
+                
                 (new ArticleController($request,$router,$session))->show($matches[1]);
                 (new CommentaireController($request,$router,$session))->indexCommentaire($matches[1]);
             },

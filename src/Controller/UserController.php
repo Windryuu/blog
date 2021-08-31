@@ -165,4 +165,8 @@ class UserController{
             echo $e->getMessage();
         }
     }
+
+    public function userShow(){
+        
+    }
 };
